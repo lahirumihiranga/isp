@@ -27,7 +27,7 @@ export const createCheckout = async () => {
   }
 
   const checkout = await polar.checkouts.create({
-    products: ["16184173-bc1c-42a5-81a3-7c4b6cdd7a97"],
+    products: ["8cc29028-e400-47f3-83ed-c7c07fa3a0af"],
     successUrl: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard/payment-success?userId=${clerkUser.id}`,
   });
 

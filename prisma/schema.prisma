@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id        String       @id
+  email     String       @unique
+  plan      String       @default("FREE") // FREE or LIFETIME
+  credits   Int          @default(3)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  links     SecureLink[]
+}
+
+model SecureLink {
+  id           String    @id
+  userId       String
+  type         String // TEXT or FILE
+  title        String?
+  content      String?   @db.Text
+  fileUrl      String?
+  expiresAt    DateTime?
+  maxViews     Int       @default(3)
+  currentViews Int       @default(0)
+  isExpired    Boolean   @default(false)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}

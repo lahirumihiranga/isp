@@ -87,11 +87,11 @@ export default function FeaturesPage() {
                 </div>
                 <div className="relative z-10 mt-6 space-y-2 text-center">
                   <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">
-                    Secure by default
+                    End-to-End Encryption
                   </h2>
                   <p className="text-foreground">
-                    Provident fugit and vero voluptate. magnam magni doloribus
-                    dolores voluptates a sapiente nisi.
+                    End-to-end encryption ensures only authorized recipients can
+                    access your shared content.
                   </p>
                 </div>
               </CardContent>
@@ -182,11 +182,11 @@ export default function FeaturesPage() {
                 </div>
                 <div className="relative z-10 mt-14 space-y-2 text-center">
                   <h2 className="text-lg font-medium transition">
-                    Faster than light
+                    Zero-Knowledge Privacy
                   </h2>
                   <p className="text-foreground">
-                    Provident fugit vero voluptate. magnam magni doloribus
-                    dolores voluptates inventore nisi.
+                    Your encryption keys never leave your device, ensuring
+                    complete privacy and security.
                   </p>
                 </div>
               </CardContent>
@@ -199,11 +199,11 @@ export default function FeaturesPage() {
                   </div>
                   <div className="space-y-2">
                     <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">
-                      Faster than light
+                      Self-Destructing Links
                     </h2>
                     <p className="text-foreground">
-                      Provident fugit vero voluptate. Voluptates a sapiente
-                      inventore nisi.
+                      Links automatically expire after your chosen duration,
+                      making content permanently inaccessible.
                     </p>
                   </div>
                 </div>
@@ -264,11 +264,11 @@ export default function FeaturesPage() {
                   </div>
                   <div className="space-y-2">
                     <h2 className="text-lg font-medium transition">
-                      Keep your loved ones safe
+                      Access Controls
                     </h2>
                     <p className="text-foreground">
-                      Voluptate. magnam magni doloribus dolores voluptates a
-                      sapiente inventore nisi.
+                      View limits ensure your content is only seen by intended
+                      recipients.
                     </p>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import { columns } from "./_components/columns"
 import { DataTable } from "./_components/data-table"
 import { db } from "@/lib/config/db"
+import { currentUser } from "@clerk/nextjs/server"
 
 export const metadata: Metadata = {
   title: "Manage Links",
@@ -11,7 +12,12 @@ export const metadata: Metadata = {
 
 // Simulate a database read for tasks.
 async function getLinks() {
-  const data = await db.secureLink.findMany()
+  const clerUser = await currentUser()
+  const data = await db.secureLink.findMany({
+    where:{
+      userId: clerUser?.id
+    }
+  })
   return data
 }
 

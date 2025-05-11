@@ -92,32 +92,30 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3 mt-12">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 mt-12">
             {[
               {
-                name: "Alex Johnson",
+                name: "Lahiru Mihiranga",
                 role: "Founder & CEO",
                 bio: "Security expert with 15+ years in data protection and privacy solutions.",
+                link: '/images/team/lahiru.jpeg'
               },
               {
                 name: "Sam Rivera",
                 role: "CTO",
-                bio: "Cryptography specialist focused on building scalable, secure systems.",
-              },
-              {
-                name: "Taylor Chen",
-                role: "Head of Product",
-                bio: "UX enthusiast dedicated to making security accessible to everyone.",
+                bio: "Cryptography specialist focused on building scalable, high available secure systems.",
+                link: '/'
               },
             ].map((member, index) => (
-              <div key={index} className="flex flex-col items-center space-y-4">
+              <div key={index} className="flex flex-col items-center justify-center space-y-4 mx-auto">
                 <div className="overflow-hidden rounded-full">
                   <Image
-                    src={`/placeholder.svg?height=200&width=200`}
+                    src={member.link}
                     alt={member.name}
                     width={200}
                     height={200}
                     className="aspect-square object-cover"
+                    priority
                   />
                 </div>
                 <div className="space-y-2 text-center">
